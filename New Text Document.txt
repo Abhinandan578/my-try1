@@ -1,0 +1,29 @@
+/**
+ * Get an AES key from a static password and a secret salt
+ * 
+ * @param string $password Your weak password here
+ * @param int $keysize Number of bytes in encryption key
+ */
+function getKeyFromPassword($password, $keysize = 16)
+{
+    return hash_pbkdf2(
+        'sha256',
+        $password,
+        MY_PBKDF2_SALT,
+        100000, // Number of iterations
+        $keysize,
+        true
+    );
+What is an initialization vector?
+
+An initialization vector (IV) is an arbitrary number that can be used along with a secret key for data encryption. This number, also called a nonce, is employed only one time in any session. 
+
+The use of an IV prevents repetition in data encryption, making it more difficult for a hacker using a dictionary attack to find patterns and break a cipher. For example, a sequence might appear twice or more within the body of a message. If there are repeated sequences in encrypted data, an attacker could assume that the corresponding sequences in the message were also identical. The IV prevents the appearance of corresponding duplicate character sequences in the ciphertext. 
+
+
+
+The ideal IV is a random number that is made known to the destination computer to facilitate decryption of the data when it is received. The IV can be agreed on in advance, transmitted independently or included as part of the session setup prior to exchange of the message data. The length of the IV (the number of bits or bytes it contains) depends on the method of encryption. The IV length is usually comparable to the length of the encryption key or block of the cipher in use.
+}
+
+The format string consists of format codes followed by an optional repeater argument. The repeater argument can be either an integer value or * for repeating to the end of the input data. For a, A, h, H the repeat count specifies how many characters of one data argument are taken, for @ it is the absolute position where to put the next data, for everything else the repeat count specifies how many data arguments are consumed and packed into the resulting binary string. 
+Here I do not store any kind of key anywhere. I generate key and IV using Rfc2898DeriveBytes class at runtime. The logic/implementation to generate the key/IV is public but not the key itself, which is never saved. Using tools like Reflector, it’s easy to reverse engineer and get the source code back. Hence the encryption dll needs to use something like, in-built Dotfuscator to protect source code theft. The implementation logic needs to be safeguarded. In real live scenarios, the whole key generation implementation can live on another system – as an example DB+WCF service – and the application asking for the key will have very very minimum access on the key storing box.However there is something (not the key) which has to be persisted. In my example here, it’s a string data which is different from the pattern, I am trying to encrypt. 
