@@ -2,35 +2,47 @@
 <html>
 <head>
 	<title>First</title>
-	<style type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/home/anmol/Documents/privacy/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/home/anmol/Documents/privacy/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<style>
+ul#list li{
+padding-top:6%;
+font-size:150%;
+}
 body
 {
 background-color:black;
 color:white;
 }
-		#login
-		{
-			width:300px;
-			margin:auto;
-			margin-top:20%;
-		}
-		input[type=submit]
-		{
-			color:white;
-			width:100%;
-			background-color: #1A8EFC
-		}
-		#sign_up
-		{
-			color:;
-			text-decoration: none;
-		}
-	</style>
+</style>
 </head>
 <body>
-<H1>Login Page</H1>
-<div id="login">
-<form action="logincopy.php" method ="POST">
+	<nav class="navbar navbar-inverse navbar-fixed-top" >
+  <div class="container-fluid" id="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="myfunction()">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">SecureIt</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" id="home1"><a href="#">Home</a></li>
+        <li id="lockit1"><a href="#LockIt" onclick="function1()">LockIt</a></li>
+        <li id="inst1"><a href="#Instant Messaging">Instant Messaging</a></li> 
+        <li id="security1"><a href="#Security">Security</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="caret"></span></a>
+        <ul class="dropdown-menu" style="border-radius:10%;text-align:center;background-color:#f4f6f7;">
+          <li>
+<form action="logincopy.php" method ="POST" style="border-radius:5%;">
 <fieldset>
 	<legend>Login</legend>
 	<table>
@@ -50,9 +62,79 @@ color:white;
 	<td><input type = "password" name="passotp"></td>
 	</tr> -->
 	</table>
-</fieldset><br><br>
+</fieldset>
 <b>Don't have an account?</b> <a href="register.html"><span id="sign_up">Sign Up</span></a>
-</form>
+</form></li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div style="margin-top:50px;height:device-height;background-color:white    ;">
+<div class="container" style="color:black;backgound-color:white;height:device:height;">
+<div class="row">
+<div class="col-sm-8">
+<p style="text-decoration:bold;margin-top:4%;font-size:300%;">Secure It</p>
+<ul id="list" style="list-style-type:square;">
+<li style="padding-top:4%;">Tired of remembering your long secure passwords?</li>
+<li>Don't trust your notes or your mobile phones with such important information?</li>
+<li>We bring to you the solution</li>
+<li>Trust us and you don't need to ever remember your PASSWORDS</li>
+<li>We provide high level encrypted data sharing and instant messaging features</li>
+<li style="padding-bottom:6%;">You can also use our secure STICKY NOTES to keep your confidential data safe</li>
+</ul>  
 </div>
+<div class="col-sm-4" style="margin-top:10%;">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="pic1.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="pic2.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="pic3.jpg" alt="Flower">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="margin:0px;height:device-height;background-color: black
+;">
+<div id="LockIt" class="container" style="background-color:  black ;color:white;height:device-height;">
+<ul id="list" style="list-style-type:square;">
+<li>With our special encryption,keep your passwords safe and secure.Free yourself of all the hassles of remembering your long passwords.</li>
+<li>We also provide you a smooth and effortless framework of single button sign in to various accounts of yours.</li>
+<li>Your passwords are INVISIBLE to everyone even if you are logged in, with enhanced password security for access.</li>
+<li>We provide you a double protection for your account with both email and otp verification required for any change in details.</li>
+<li>Each login attempt requires an OTP validation from the registered mobile phone to thwart any unauthorised access.</li>
+<li>We DON'T SEE your passwords! We follow end to end encryption and don't see, share or decrypt your passwords with any third party resource.</li>
+</ul>  
+</div>
+<script>
+function myfunction()
+{
+	document.getElementById("navigation").style.opacity="0.8";
+}
+function function1()
+{
+	document.getElementById("lockit1").className="active";
+	document.getElementById("home1").className="#";
+}
+</script>
 </body>
 </html>
