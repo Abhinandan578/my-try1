@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First</title>
+	<style type="text/css">
+body
+{
+background-color:black;
+color:white;
+}
+		#login
+		{
+			width:300px;
+			margin:auto;
+			margin-top:20%;
+		}
+		input[type=submit]
+		{
+			color:white;
+			width:100%;
+			background-color: #1A8EFC
+		}
+		#sign_up
+		{
+			color:;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+<H1>Login Page</H1>
+<div id="login">
+<form action="logincopy.php" method ="POST">
+<fieldset>
+	<legend>Login</legend>
+	<table>
+	<tr>
+	<td>Username</td>
+	<td><input type="text" name ="uname"></td>
+	</tr>
+	<tr>
+	<td>Password</td>
+	<td><input type="password" name="password"></td>
+	</tr>
+	<tr>
+	<td colspan="2"><input type="submit" value="Login" name="login"></td>
+	</tr>
+	<!-- <tr>
+	<td>OTP</td>
+	<td><input type = "password" name="passotp"></td>
+	</tr> -->
+	</table>
+</fieldset><br><br>
+<b>Don't have an account?</b> <a href="register.html"><span id="sign_up">Sign Up</span></a>
+</form>
+</div>
+</body>
+</html>
