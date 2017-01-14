@@ -1,15 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "Test Extension",
-  "version": "1.1",
-
-  "background": {
-    "persistent": false,
-    "scripts": ["background.js"]
+  "name": "A chrome extension plugin",
+  "description": "Some descriptive text.",
+  "version": "2.5",
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "login_ext.html"
   },
-
   "permissions": [
-    "activeTab", 
-    "https://127.0.0.1/*"
-  ]
+   "tabs"
+   ]
 }

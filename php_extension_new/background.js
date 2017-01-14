@@ -1,7 +1,8 @@
+
 function sendCurrentUrl(url) {
   var req = new XMLHttpRequest();
   req.addEventListener('readystatechange', function (evt) {
-    if (req.readyState === 4) {
+    if (req.readyState === 0) {
       if (req.status === 200) {
         alert('Saved !');
       } else {
