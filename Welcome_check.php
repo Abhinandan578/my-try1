@@ -20,7 +20,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 		$Aotp=$row["OTP"];
 		if($Iotp==$Aotp)
 		{
-			redirect('Welcome.html');
+			redirect('client.php');
+		}
+		else
+		{
+			echo "Incorrect OTP";
 		}
 	}
 }
