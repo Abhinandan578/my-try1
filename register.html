@@ -2,11 +2,88 @@
 <html>
 <head>
 	<title>Sign_Up page</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/home/anmol/Documents/privacy/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/home/anmol/Documents/privacy/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<style>
+body{
+background-color: #3bcf77 ;
+
+}
+
+table#sign
+{
+ height:100%;background-color:white;opacity:0.7;border-radius:5%;
+}
+table#sign td,tr
+{
+padding:3%;
+border:0px solid grey;
+}
+</style>
 </head>
 <body>
-<form action="sign_up.php" method="POST">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">SecureIt</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li id="home1"><a href="index.html">Home</a></li>
+        <li id="lockit1"><a href="index.html#LockIt" onclick="function1()">LockIt</a></li>
+        <li id="inst1"><a href="index.html#Instant Messaging">Instant Messaging</a></li> 
+        <li id="security1"><a href="index.html#Security">Security</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="caret"></span></a>
+        <ul class="dropdown-menu" style="border-radius:10%;text-align:center;background-color:#f4f6f7;">
+          <li>
+<form action="logincopy.php" method ="POST" style="border-radius:5%;">
 <fieldset>
+	<legend>Login</legend>
 	<table>
+	<tr>
+	<td>Username</td>
+	<td><input type="text" name ="uname"></td>
+	</tr>
+	<tr>
+	<td>Password</td>
+	<td><input type="password" name="password"></td>
+	</tr>
+	<tr>
+	<td colspan="2"><input type="submit" value="Login" name="login"></td>
+	</tr>
+	</table>
+</fieldset>
+<b>Don't have an account?</b> <a href="register.html"><span id="sign_up">Sign Up</span></a>
+</form></li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron" style="text-align:center;font-size:300%;opacity:1;background-color: #3bcf77 ;margin-top:50px;">
+SECUREIT
+</div>
+<div class="container" style="margin-bottom:50px;">
+<div class="row">
+<div class="col-sm-6">
+</div>
+<div class="col-sm-6" style="text-align:center;">
+<form action="sign_up.php" method="POST" style="text-align:right;">
+<fieldset>
+<div  class="table-responsive" style="width:75%;">
+	<table id="sign" class="table" style="border:0px solid grey;">
 		<tr>
 			<td><input type="text" name="fname" placeholder="First Name"></td>
 			<td><input type="text" name="lname" placeholder="Last Name"></td>
@@ -26,7 +103,18 @@
 		<tr>
 		<td><input type="submit" value="Register" name="register"></td>
 		</tr>
+		<tr>
+		<td colspan="2">Already have an account? Click here.</td>
+		</tr>
 	</table>
+</div>
 </fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class="navbar navbar-bottom" style="margin-top:5.5%;margin-bottom:0px;background-color:black;color:white;text-align:center;font-size:150%;">
+<span class="glyphicon glyphicon-copyright-mark" style="margin-top:0.5%;"> Copyright @ AAP Studio of Creation ;)</span>
+</div>
 </body>
 </html>
