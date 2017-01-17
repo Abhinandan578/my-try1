@@ -2,12 +2,17 @@
   "manifest_version": 2,
   "name": "A chrome extension plugin",
   "description": "Some descriptive text.",
+<<<<<<< HEAD
   "version": "3.8",
+=======
+  "version": "2.5",
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
   "browser_action": {
    "default_icon": "icon.png",
    "default_popup": "login_ext.html"
   },
   "permissions": [
+<<<<<<< HEAD
    "tabs",
    "activeTab",
    "cookies"
@@ -23,4 +28,8 @@
       "all_frames": true
     }
   ]
+=======
+   "tabs"
+   ]
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 }

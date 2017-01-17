@@ -2,6 +2,7 @@
 
 <?php
 $query="SELECT OTP FROM OTP_Details WHERE Username='".$_SESSION['Username']."'";
+<<<<<<< HEAD
 		$res=mysqli_query($db, $query);
 		$row=mysqli_fetch_assoc($res);
 		$otp=$row["OTP"];
@@ -10,6 +11,16 @@ $query="SELECT OTP FROM OTP_Details WHERE Username='".$_SESSION['Username']."'";
 		$res1=mysqli_query($db, $query1);
 		$row1=mysqli_fetch_assoc($res1);
 		$Phone_No=$row1["Phone_No"];
+=======
+        $res=mysqli_query($db, $query);
+        $row=mysqli_fetch_assoc($res);
+        $otp=$row["OTP"];
+
+        $query1="SELECT Phone_No FROM User_Details WHERE Username='".$_SESSION['Username']."'";
+        $res1=mysqli_query($db, $query1);
+        $row1=mysqli_fetch_assoc($res1);
+        $Phone_No=$row1["Phone_No"];
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 require __DIR__ .'/vendor/autoload.php';
 // Use the RESTClient to make requests to the Twilio REST API
 use Twilio\Rest\Client;
@@ -30,6 +41,10 @@ $client->account->messages->create(
         'body' => "OTP:".$otp."for the phone number".$Phone_No.""
     )
 );
+<<<<<<< HEAD
 echo "message has been send";
 echo $Phone_No;
+=======
+
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 ?>  

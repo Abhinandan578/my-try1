@@ -16,6 +16,16 @@ function generate_secret_key1($value) {
     }
     return $hex;
 }
+<<<<<<< HEAD
+=======
+function hexToStr($hex){
+    $string='';
+    for ($i=0; $i < strlen($hex)-1; $i+=2){
+        $string .= chr(hexdec($hex[$i].$hex[$i+1]));
+    }
+    return $string;
+}
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 
 	function length_check32($value) {
 		if(strlen($value)>32)
@@ -29,7 +39,10 @@ function generate_secret_key1($value) {
 		
 		return $new_value;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 // $query1="SELECT Password FROM User_Details WHERE Username='".$_SESSION['Username']."'";
 		// $query1="SELECT Password FROM User_Details WHERE Username='abhi578'";
 		// $res1=mysqli_query($db, $query1);

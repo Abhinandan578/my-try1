@@ -118,7 +118,11 @@ $InitalizationKey = Google2FA::generate_secret_key();					// Set the inital key
 $TimeStamp	  = Google2FA::get_timestamp();
 $secretkey 	  = Google2FA::base32_decode($InitalizationKey);	// Decode it into binary
 $otp       	  = Google2FA::oath_hotp($secretkey, $TimeStamp);	
+<<<<<<< HEAD
 //$_SESSION["OTP"]=$otp;
+=======
+$_SESSION["OTP"]=$otp;
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 // Get current token
 // echo("Init key: $InitalizationKey\n");
 // echo("Timestamp: $TimeStamp\n");

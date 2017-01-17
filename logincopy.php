@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 session_start();
+=======
+// session_start();
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 $error="";
 include("config.php");
 include("encryption.php");
@@ -35,14 +39,22 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 			if($passcrypt==$password)
 			{
 				include("otp.php");
+<<<<<<< HEAD
 				// include ("otpsend.php");
 				// echo "Pass Match";
+=======
+				include ("otpsend.php");
+				echo "Pass Match";
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 				// echo "<script type= text/javascript>
 				// 		{
 				// 			Window.location= 'otp_confirm.php';
 				// 		}";
 				redirect('otp_confirm.php');
+<<<<<<< HEAD
 				
+=======
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 			}
 			else
 			{
@@ -56,4 +68,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	}
 
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146

@@ -20,7 +20,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 		$Aotp=$row["OTP"];
 		if($Iotp==$Aotp)
 		{
+<<<<<<< HEAD
 			redirect('webaccount.php');
+=======
+			redirect('client.php');
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 		}
 		else
 		{

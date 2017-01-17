@@ -30,13 +30,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 		{
 			$row=mysqli_fetch_array($res,MYSQLI_ASSOC);
 			$test=$row["Password"];
+<<<<<<< HEAD
 			$_SESSION["URL"]=$_POST['url'];
+=======
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 			// echo $test."<br>";
 			$passcrypt=mc_decrypt($row["Password"],ENCRYPTION_KEY);
 			// echo "Decrypted:" . mc_decrypt($test, ENCRYPTION_KEY)."<br>";
 			if($passcrypt==$password)
 			{
 				include("otp.php");
+<<<<<<< HEAD
 				// include ("otpsend.php");
 				include("cookie_gen.js");
 				// chrome.cookies.set({
@@ -63,6 +67,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 				redirect('otp_confirm.php');
 		
+=======
+				include ("otpsend.php");
+				// echo "Pass Match";
+				// echo "<script type= text/javascript>
+				// 		{
+				// 			Window.location= 'otp_confirm.php';
+				// 		}";
+				redirect('otp_confirm.php');
+				// echo "yha tak phuch gya";
+				
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 			}
 			else
 			{

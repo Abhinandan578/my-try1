@@ -10,5 +10,10 @@ echo "<tr>";
 echo "<td><input type='Submit' name='Confirm' Value='Confirm OTP'></td>";
 echo "</tr>";
 echo "</table>";
+<<<<<<< HEAD
 echo $_SESSION["OTP"];
+=======
+echo "</form>";
+
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 ?>

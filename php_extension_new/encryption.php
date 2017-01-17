@@ -33,7 +33,10 @@ function mc_decrypt($decrypt,$key){
 	if($calcmac!=$mac)
 	{
 		echo "Mac not matched<br>";
+<<<<<<< HEAD
 		echo $calcmac."<br>".$mac;
+=======
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 		return false;
 	}
 	$decrypted=unserialize($decrypted);
@@ -57,4 +60,8 @@ function mc_decrypt($decrypt,$key){
 // echo 'Decrypted Data: <pre>';
 // print_r(mc_decrypt($encrypted_data, ENCRYPTION_KEY));
 // echo '</pre>';
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146

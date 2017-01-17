@@ -1,6 +1,7 @@
 <?php
 	include("config.php");
 	include("encryption.php");
+<<<<<<< HEAD
 	function redirect($url,$permanent=false)
 {
 	if($permanent){
@@ -9,6 +10,8 @@
 	header('Location: '.$url);
 	exit();
 }
+=======
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 	$fname= $lname= $phn_num= $uname= $password= $email= "";
 	if($_SERVER["REQUEST_METHOD"]=="POST")
 	{
@@ -35,6 +38,7 @@
 			    {
 			    	$query1="INSERT INTO User_Details(First_Name, Last_Name, Username,Password,Email_Id,Phone_No) VALUES ('$fname','$lname','$uname','$password','$email','$phn_num')";
 			    	$res1=mysqli_query($db,$query1); 
+<<<<<<< HEAD
 			    	if($res1)
 			    	{
 			    		echo "Query Successful";
@@ -46,6 +50,8 @@
 			    		echo mysqli_error($db);
 
 			    	}
+=======
+>>>>>>> 3f2bc179fa748918c4e83fca192bc615c2c8c146
 			    }
 
 			}
