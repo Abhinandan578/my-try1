@@ -33,6 +33,7 @@ function mc_decrypt($decrypt,$key){
 	if($calcmac!=$mac)
 	{
 		echo "Mac not matched<br>";
+		echo $calcmac."<br>".$mac;
 		return false;
 	}
 	$decrypted=unserialize($decrypted);
